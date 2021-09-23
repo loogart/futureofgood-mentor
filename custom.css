@@ -1,0 +1,49 @@
+:root {
+    --black: #0a0a0a;
+    --yellow: #F7C94A;
+    --grey: #565656;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--yellow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Big Shoulders Text', cursive;
+    font-weight: 900;
+}
+
+section{
+    padding-top: 80px;
+    padding-bottom:80px;
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+}
+
+.text-yellow {
+    color: var(--yellow)
+}
+
+.text-black {
+    color: var(--black)
+}
+
+.text-grey {
+    color: var(--grey)
+}
