@@ -7,17 +7,76 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
     background-color: var(--yellow);
+    font-size: 1rem;
+    color:var(--black);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
     font-family: 'Big Shoulders Text', cursive;
     font-weight: 900;
 }
+
+.small, small{
+    font-size:.75em;
+}
+
+.extrasmall{
+    font-size:.6em;
+}
+
+.jumbo{
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+.lead{
+    font-size: 1.15rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.navbar-logo{
+    width:260px;
+}
+
+.grid-border-right{
+    border-right: 4px solid white;
+}
+.grid-border-bottom{
+    border-bottom: 4px solid white;
+}
+
+@media (max-width:767px){
+    .navbar-logo{
+        width:170px;
+    }
+    .img-mobile-25{
+        max-width:25%;
+    }
+    .img-mobile-50{
+        max-width:50%;
+    }
+    .img-mobile-75{
+        max-width:75%;
+    }
+    .jumbo{
+        font-size: 3em;
+        line-height: 1.1;
+    }
+    .grid-border-right{
+        border-right: 0;
+    }
+    .grid-border-bottom-mobile{
+        border-bottom: 4px solid white;
+    }
+}
+
+
 
 section{
     padding-top: 80px;
@@ -26,14 +85,17 @@ section{
 
 .bg-yellow {
     background-color: var(--yellow);
+    color:black;
 }
 
 .bg-black {
     background-color: var(--black);
+    color:white;
 }
 
 .bg-grey {
     background-color: var(--grey);
+    color: black;
 }
 
 .text-yellow {
@@ -46,4 +108,16 @@ section{
 
 .text-grey {
     color: var(--grey)
+}
+
+.border-yellow{
+    border-color:var(--yellow)!important;
+}
+
+.border-black{
+    border-color:var(--black)!important;
+}
+
+.border-dashed{
+    border-style: dashed!important;
 }
