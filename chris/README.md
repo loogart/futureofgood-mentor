@@ -17,3 +17,5 @@ The publisher header and footer retain the original raster artwork from Figma. L
 Verified in Chrome at 1440px and 390px: all 100 desktop artwork placements load, no JavaScript errors, no mobile horizontal overflow, and working chapter navigation. All assets are stored locally; no temporary Figma asset URLs are used at runtime.
 
 Live GitHub Pages URL: https://loogart.github.io/futureofgood-mentor/chris/
+
+Scroll motion: artwork and panels rise into view, headings type in, and body text resolves from a subtle blur line by line. Every reveal resets on viewport exit and replays in either scroll direction. Reduced-motion preferences and print output show all content immediately.

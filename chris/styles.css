@@ -651,3 +651,51 @@
 .art-28 .n393{left:0.0px;top:0.0px}
 .chapter h1,.chapter h2{margin:0}#diversity{background:linear-gradient(to bottom,#f7c94a 309px,#fff 309px)}
 .skip-link{opacity:0;pointer-events:none}.skip-link:focus{opacity:1;pointer-events:auto}
+
+/* Scroll reveals preserve every layout position and original artwork crop. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-enabled .motion-art,
+  .motion-enabled .motion-panel,
+  .motion-enabled .motion-stat {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+    transition: opacity 650ms ease, transform 850ms cubic-bezier(.16, 1, .3, 1);
+  }
+  .motion-enabled .motion-panel { transform: translate3d(0, 12px, 0); }
+  .motion-enabled .motion-stat { transform: translate3d(0, 16px, 0); }
+  .motion-enabled .motion-art.is-visible,
+  .motion-enabled .motion-panel.is-visible,
+  .motion-enabled .motion-stat.is-visible { opacity: 1; transform: translate3d(0, 0, 0); }
+  .motion-char { opacity: 1; }
+  .motion-enabled .motion-heading .motion-char {
+    opacity: 0;
+    transition: opacity 120ms ease;
+    transition-delay: 0ms;
+  }
+  .motion-enabled .motion-heading.is-visible .motion-char {
+    opacity: 1;
+    transition-delay: var(--character-delay, 0ms);
+  }
+  .motion-word { display: inline-block; }
+  .motion-enabled .motion-body .motion-word {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translate3d(0, 5px, 0);
+    transition: opacity 400ms ease, filter 650ms ease, transform 650ms cubic-bezier(.16, 1, .3, 1);
+    transition-delay: 0ms;
+  }
+  .motion-enabled .motion-body.is-visible .motion-word {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+    transition-delay: var(--line-delay, 0ms);
+  }
+}
+/* Content remains fully readable in reduced motion and print modes. */
+@media (prefers-reduced-motion: reduce), print {
+  .motion-char, .motion-word, .motion-reveal {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
